@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="description" content="UniTn E-sports is the official University of Trento student association for competitive gaming, tournaments, and esports events. Join our vibrant community!" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://unitnesports.it/" />
+        <title>UniTn E-sports</title>
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://unitnesports.it/" />
+        <meta property="og:title" content="UniTn E-sports" />
+        <meta property="og:description" content="UniTn E-sports is the official University of Trento student association for competitive gaming, tournaments, and esports events. Join our vibrant community!" />
+        <meta property="og:image" content="https://unitnesports.it/images/logo_no_bg.png" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://unitnesports.it" />
+        <meta name="twitter:title" content="UniTn E-sports" />
+        <meta name="twitter:description" content="UniTn E-sports is the official University of Trento student association for competitive gaming, tournaments, and esports events. Join our vibrant community!" />
+        <meta name="twitter:image" content="https://unitnesports.it/images/logo_no_bg.png" />
+
+        <!-- Organization Schema.org -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollegeOrUniversity",
+            "name": "UniTn E-sports",
+            "url": "https://unitnesports.it",
+            "logo": "https://unitnesports.it/images/logo_no_bg.png",
+            "description": "UniTn E-sports is the official University of Trento student association for competitive gaming, tournaments, and esports events. Join our vibrant community!"
+        }
+        </script>
+    <!-- Favicon and icons for all platforms -->
+    <link rel="icon" type="image/x-icon" href="images/ico_files/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/ico_files/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/ico_files/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/ico_files/apple-touch-icon.png" />
+    <link rel="manifest" href="images/ico_files/site.webmanifest" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#home" data-i18n="brand"><img src="images/logo_no_bg.png" alt="unitn esports logo" width="80" height="80"></a>
+            <nav id="mainNav" class="main-nav">
+                <a href="#presentation" data-i18n="nav.about">About</a>
+                <a href="#calendar" data-i18n="nav.calendar">Calendar</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+                <a href="#social" class="social-link" data-i18n="nav.social">Social</a>
+            </nav>
+            <div class="header-controls">
+                <div class="lang-switch" aria-hidden="false">
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="it">IT</button>
+                </div>
+                <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero" style="position:relative; overflow:hidden; background-image:url('images/giocatori.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+            <!-- semi-transparent overlay to improve text contrast -->
+            <div class="hero-overlay" aria-hidden="true" style="position:absolute; inset:0; background:rgba(0,0,0,0.35);"></div>
+
+            <div class="container" style="position:relative; z-index:1;">
+                <h1 class="hero-title" data-i18n="hero.title">Welcome to UniTn E-sports</h1>
+                <p class="hero-sub" data-i18n="hero.sub">Student-run competitive gaming and community events. Join us!</p>
+                <div class="hero-actions">
+                    <a class="btn" href="#calendar" data-i18n="hero.seeEvents">See events</a>
+                    <a class="btn outline" href="#contact" data-i18n="hero.getInvolved">Get involved</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="presentation" class="panel">
+            <div style="display:flex; justify-content:center;">
+                <div class="card centered-card">
+                    <h2 data-i18n="presentation.h1">Who we are</h2>
+                    <p data-i18n="presentation.p1" class="card-text">
+                        UniTn E-sports is a student sports association founded in 2022 with the aim of creating a community of students who can share their passion for competitive video games.<br>
+                        The association aims to create student teams that participate in national and international tournaments and competitions, representing the University of Trento in the field of E-sports.<br>
+                        UniTn E-sports organizes both online and offline events and competitions, involving students from different faculties and academic years, and aims to develop an external network of relationships with other universities. In addition, the association also organizes training events for students interested in entering the world of E-sports.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="calendar" class="panel calendar-panel">
+            <div class="container">
+                <h2 data-i18n="calendar.h1">Calendar</h2>
+
+                <div class="calendar-actions">
+                    <a id="gcalSubscribe" class="btn" href="#" target="_blank" data-i18n="calendar.openGcal">Open in Google Calendar</a>
+                    <a id="icsDownload" class="btn outline" href="#" data-i18n="calendar.downloadIcs">Export (download .ics file)</a>
+                </div>
+
+                <div class="calendar-embed">
+                    <div class="iframe-wrap">
+                        <iframe id="gcalIframe" src="https://calendar.google.com/calendar/embed?src=7ce2a231d31471b8c4677024ce69c937623dd5ea67bf1c7568966d2d0da8f255@group.calendar.google.com&ctz=Europe%2FRome" style="border:0" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="panel">
+            <h2 class="record-heading" data-i18n="record.h1">Record of events and competitions</h2>
+            <div class="container grid">
+                <article class="card record-grid-cell">
+                    <img src="images/events/gsports_league.png" alt="GSport League">
+                    <h3 class="record-title">GSport League</h3>
+                    <time class="record-date">2023</time>
+                </article>
+
+                <article class="card record-grid-cell">
+                    <img src="images/events/amazon_university_esports.png" alt="Amazon University E-sports">
+                    <h3 class="record-title">Amazon University E-sports</h3>
+                    <time class="record-date">2023</time>
+                </article>
+
+                <article class="card record-grid-cell">
+                    <img src="images/events/ygo_tournament.png" alt="In-house Yu-Gi-Oh! tournament">
+                    <h3 class="record-title" data-i18n="record.ygo-tournament.h3">In-house Yu-Gi-Oh! tournament</h3>
+                    <time class="record-date">2025</time>
+                </article>
+
+                <article class="card record-grid-cell">
+                    <img src="images/events/synergie-cup-logo.png" alt="Synergie Rocket League Cup">
+                    <h3 class="record-title">Synergie Rocket League Cup</h3>
+                    <time class="record-date">2025</time>
+                </article>
+            </div>
+        </section>
+        <section id="contact" class="panel">
+            <div class="container grid-contact">
+                <div class="card contact-card reveal">
+                    <h2 data-i18n="contact.h1">Contact Us</h2>
+                    <p data-i18n="contact.desc">Questions or volunteering? Fill the form or email us directly.</p>
+                    <form id="contactForm" action="mailto:unitn_e-sports@outlook.it" method="post" enctype="text/plain">
+                        <label for="name" data-i18n="contact.label.name">Name</label>
+                        <input id="name" name="name" placeholder="Your name" data-i18n-placeholder="contact.ph.name" required />
+                        <label for="email" data-i18n="contact.label.email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="email@example.com" data-i18n-placeholder="contact.ph.email" required />
+                        <label for="message" data-i18n="contact.label.message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write a short message" data-i18n-placeholder="contact.ph.message"></textarea>
+                        <div class="form-actions">
+                            <button type="submit" class="btn" data-i18n="contact.btn.send">Send</button>
+                            <button type="reset" class="btn outline" data-i18n="contact.btn.reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="card contact-info reveal" style="align-self:start; height:auto; padding:1rem; box-sizing:border-box; max-width: 360px;">
+                    <h3 data-i18n="contact.otherWays">Other ways to reach us</h3>
+                    <p><strong data-i18n="contact.emailLabel">Email:</strong> <a href="mailto:unitn_e-sports@outlook.it">unitn_e-sports@outlook.it</a></p>
+                    <p><strong data-i18n="contact.socialLabel">Socials:</strong></p>
+                    <div id="social" class="social-icons">
+                        <a href="https://www.instagram.com/unitn_esports/" aria-label="Instagram" class="social" target="_blank" rel="noopener noreferrer">
+                            <img src="images/svg/instagram_white.svg" alt="Instagram" width="20" height="20" class="social-icon" />
+                        </a>
+                        <a href="https://discord.gg/3sKa5A8DcJ" aria-label="Discord" class="social" target="_blank" rel="noopener noreferrer">
+                            <img src="images/svg/discord_white.svg" alt="" width="20" height="20" class="social-icon" />
+                        </a>
+                        <a href="https://t.me/+ka6nwbQpS2w3MjVk" aria-label="Telegram" class="social" target="_blank" rel="noopener noreferrer">
+                            <img src="images/svg/telegram_white.svg" alt="" width="20" height="20" class="social-icon" />
+                        </a>
+                        <a href="https://github.com/unitn-esports" aria-label="Github" class="social" target="_blank" rel="noopener noreferrer">
+                            <img src="images/svg/github_white.svg" alt="" width="20" height="20" class="social-icon" />
+                        </a>
+                    </div>
+                    <p class="muted" style="margin-top:1rem;">
+                        <a data-i18n="contact.dataNotice" href="https://docs.google.com/document/d/1HXsFeqlYsUOa8hifcpSuMp3FEjUcxF3bbBuX8SjGpkc/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Data processing notice" data-i18n="contact.dataNotice">Data processing notice</a>
+                    </p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <small data-i18n="footer.copy">&copy; 2025 UniTn E-sports — All rights reserved</small>
+            <nav class="footer-nav">
+                <a href="#presentation">About</a>
+                <a href="#calendar">Calendar</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+        <div class="container footer-note-wrap">
+            <p class="footer-note" data-i18n="footer.note">Fatto con <span class="heart">❤️</span> da Pietro Marini</p>
+            <p class="footer-assets-note" data-i18n="footer.assetsNotice">
+                Tutti gli asset utilizzati per descrivere o mostrare eventi rimangono di proprietà dei rispettivi titolari.<br>UniTn E-sports non rivendica alcun diritto di proprietà su tali materiali.<br>Prima di aggiungere immagini, vengono contattati i relativi proprietari per ottenere il permesso d'uso.
+            </p>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

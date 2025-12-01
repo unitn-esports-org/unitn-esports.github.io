@@ -1,0 +1,124 @@
+{
+  "en": {
+    "brand": {
+      "text": "UniTn E-sports",
+      "alt": "UniTn E-sports logo"
+    },
+    "nav": {
+      "about": "About",
+      "calendar": "Calendar",
+      "contact": "Contact",
+      "social": "Social"
+    },
+    "hero": {
+      "title": "Welcome to UniTn E-sports",
+      "sub": "Student-run competitive gaming and community events. Join us!",
+      "seeEvents": "See events",
+      "getInvolved": "Get involved"
+    },
+    "presentation": {
+      "h1": "Who we are",
+      "p1": "UniTn E-sports is a student sports association founded in 2022 with the aim of creating a community of students who can share their passion for competitive video games.\nThe association aims to create student teams that participate in national and international tournaments and competitions, representing the University of Trento in the field of E-sports.\nUniTn E-sports organizes both online and offline events and competitions, involving students from different faculties and academic years, and aims to develop an external network of relationships with other universities. In addition, the association also organizes training events for students interested in entering the world of E-sports."
+    },
+    "record": {
+      "h1": "Record of events and competitions",
+      "ygo-tournament": {
+        "h3": "In-house Yu-Gi-Oh! tournament"
+      }
+    },
+    "calendar": {
+      "h1": "Calendar",
+      "openGcal": "Open in Google Calendar",
+      "downloadIcs": "Export (download .ics file)"
+    },
+    "contact": {
+      "h1": "Contact Us",
+      "desc": "Questions or partnerships? Fill the form or email us directly.",
+      "label": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message"
+      },
+      "ph": {
+        "name": "Your name",
+        "email": "email@example.com",
+        "message": "Write a short message"
+      },
+      "btn": {
+        "send": "Send",
+        "reset": "Reset"
+      },
+      "otherWays": "Other ways to reach us",
+      "emailLabel": "Email:",
+      "discordLabel": "Discord:",
+      "socialLabel": "Social:",
+      "dataNotice": "Data processing notice"
+    },
+    "footer": {
+      "copy": "© 2025 UniTn E-sports — All rights reserved",
+      "note_en": "Made with ❤️ by Pietro Marini",
+      "assetsNotice": "All assets used to describe or display events remain the property of their respective owners.<br>UniTn E-sports makes no claim of ownership over such materials.<br>Before adding images, all relevant owners are contacted to obtain permission for use."
+    }
+  },
+  "it": {
+    "brand": {
+      "text": "UniTn E-sports",
+      "alt": "Logo di UniTn E-sports"
+    },
+    "nav": {
+      "about": "Chi siamo",
+      "calendar": "Calendario",
+      "contact": "Contatti",
+      "social": "Social"
+    },
+    "hero": {
+      "title": "Benvenuti in UniTn E-sports",
+      "sub": "Associazione studentesca per esports e eventi. Unisciti a noi!",
+      "seeEvents": "Eventi",
+      "getInvolved": "Partecipa"
+    },
+    "presentation": {
+      "h1": "Chi siamo",
+      "p1": "UniTn E-sports è un'associazione sportiva studentesca nata nel 2022 con l'intento di creare una comunità di studenti che possano condividere la loro passione per i videogiochi competitivi.\nL'associazione si pone l'obiettivo di creare dei team studenteschi che partecipino a tornei e competizioni nazionali e internazionali, per rappresentare l'Università di Trento nell'ambito degli E-sports.\nUniTn E-sports organizza eventi e competizioni sia online che offline, coinvolgendo studenti di diverse facoltà e anni accademici, e punta a sviluppare un network esterno di relazioni con le altre università. Inoltre, l'associazione organizza anche eventi di formazione per gli studenti interessati a entrare nel mondo degli E-sports."
+    },
+    "record": {
+      "h1": "Albo degli eventi e competizioni",
+      "ygo-tournament": {
+        "h3": "Torneo interno di Yu-Gi-Oh!"
+      }
+    },
+    "calendar": {
+      "h1": "Calendario",
+      "openGcal": "Apri in Google Calendar",
+      "downloadIcs": "Esporta (scarica file .ics)"
+    },
+    "contact": {
+      "h1": "Contattaci",
+      "desc": "Domande o partnership? Compila il form o scrivici via email.",
+      "label": {
+        "name": "Nome",
+        "email": "Email",
+        "message": "Messaggio"
+      },
+      "ph": {
+        "name": "Il tuo nome",
+        "email": "email@esempio.it",
+        "message": "Scrivi un breve messaggio"
+      },
+      "btn": {
+        "send": "Invia",
+        "reset": "Reset"
+      },
+      "otherWays": "Altri modi per contattarci",
+      "emailLabel": "Email:",
+      "discordLabel": "Discord:",
+      "socialLabel": "Social:",
+      "dataNotice": "Informativa sul trattamento dei dati"
+    },
+    "footer": {
+      "copy": "© 2025 UniTn E-sports — Tutti i diritti riservati",
+      "note_it": "Fatto con ❤️ da Pietro Marini",
+      "assetsNotice": "Tutti gli asset utilizzati per descrivere o mostrare eventi rimangono di proprietà dei rispettivi titolari.<br>UniTn E-sports non rivendica alcun diritto di proprietà su tali materiali.<br>Prima di aggiungere immagini, vengono contattati i relativi proprietari per ottenere il permesso d'uso."
+    }
+  }
+}
