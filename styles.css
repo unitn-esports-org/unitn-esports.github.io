@@ -1,5 +1,5 @@
 /* Record heading style */
-.record-heading {
+.main-heading {
   text-align: center;
   width: 100%;
   margin-top: 2.5rem;
@@ -293,6 +293,15 @@ html, body {
 .footer-note .heart {
   color: #ff5c7c;
   margin: 0 0.25rem
+}
+
+/* Center h3 headers in record section */
+/* we do not want to also centralize the h3 headers inside of the cells*/
+.container > h3[data-i18n^="record."] {
+  text-align: center;
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Event modal styles */

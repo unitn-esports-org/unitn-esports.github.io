@@ -77,9 +77,9 @@
         </section>
 
         <section id="presentation" class="panel">
+            <h2 class="main-heading" data-i18n="presentation.h1">Who we are</h2>
             <div style="display:flex; justify-content:center;">
                 <div class="card centered-card">
-                    <h2 data-i18n="presentation.h1">Who we are</h2>
                     <p data-i18n="presentation.p1" class="card-text">
                         UniTn E-sports is a student sports association founded in 2022 with the aim of creating a community of students who can share their passion for competitive video games.<br>
                         The association aims to create student teams that participate in national and international tournaments and competitions, representing the University of Trento in the field of E-sports.<br>
@@ -90,7 +90,7 @@
         </section>
         <section id="calendar" class="panel calendar-panel">
             <div class="container">
-                <h2 data-i18n="calendar.h1">Calendar</h2>
+                <h2 class="main-heading" data-i18n="calendar.h1">Calendar</h2>
 
                 <div class="calendar-actions">
                     <a id="gcalSubscribe" class="btn" href="#" target="_blank" data-i18n="calendar.openGcal">Open in Google Calendar</a>
@@ -105,63 +105,70 @@
             </div>
         </section>
         <section class="panel">
-            <h2 class="record-heading" data-i18n="record.h1">Record of events and competitions</h2>
-            <div class="container grid">
-                <article class="card record-grid-cell event-card" tabindex="0"
-                    data-title="GSport League"
-                    data-date="dd-mm-yyyy"
-                    data-participants="placeholder"
-                    data-description="placeholder"
-                    data-img="images/events/gsports_league.png">
-                    <img src="images/events/gsports_league.png" alt="GSport League">
-                    <h3 class="record-title">GSport League</h3>
-                    <time class="record-date">2023</time>
-                </article>
+            <h2 class="main-heading" data-i18n="record.main-title">Record of events and competitions</h2>
+            <div class="container" style="margin-bottom:2.5rem;">
+                <h3 data-i18n="record.competitions-title">Competitions we participated in</h3>
+                <div class="grid">
+                    <article class="card record-grid-cell event-card" tabindex="0"
+                        data-title="GSport League"
+                        data-date="dd-mm-yyyy"
+                        data-participants="placeholder"
+                        data-description="placeholder"
+                        data-img="images/events/gsports_league.png">
+                        <img src="images/events/gsports_league.png" alt="GSport League">
+                        <h3 class="record-title">GSport League</h3>
+                        <time class="record-date">2023</time>
+                    </article>
 
-                <article class="card record-grid-cell event-card" tabindex="0"
-                    data-title="Amazon University E-sports"
-                    data-date="dd-mm-yyyy"
-                    data-participants="placeholder"
-                    data-description="placeholder"
-                    data-img="images/events/amazon_university_esports.png">
-                    <img src="images/events/amazon_university_esports.png" alt="Amazon University E-sports">
-                    <h3 class="record-title">Amazon University E-sports</h3>
-                    <time class="record-date">2023</time>
-                </article>
+                    <article class="card record-grid-cell event-card" tabindex="0"
+                        data-title="Amazon University E-sports"
+                        data-date="dd-mm-yyyy"
+                        data-participants="placeholder"
+                        data-description="placeholder"
+                        data-img="images/events/amazon_university_esports.png">
+                        <img src="images/events/amazon_university_esports.png" alt="Amazon University E-sports">
+                        <h3 class="record-title">Amazon University E-sports</h3>
+                        <time class="record-date">2023</time>
+                    </article>
 
-                <article class="card record-grid-cell event-card" tabindex="0"
-                    data-title="In-house Yu-Gi-Oh! tournament"
-                    data-date="dd-mm-yyyy"
-                    data-participants="placeholder"
-                    data-description="placeholder"
-                    data-img="images/events/ygo_tournament.png">
-                    <img src="images/events/ygo_tournament.png" alt="In-house Yu-Gi-Oh! tournament">
-                    <h3 class="record-title" data-i18n="record.ygo-tournament.h3">In-house Yu-Gi-Oh! tournament</h3>
-                    <time class="record-date">2025</time>
-                </article>
-
-                <article class="card record-grid-cell event-card" tabindex="0"
-                    data-title="Synergie Rocket League Cup"
-                    data-date="dd-mm-yyyy"
-                    data-participants="placeholder"
-                    data-description="placeholder"
-                    data-img="images/events/synergie-cup-logo.png">
-                    <img src="images/events/synergie-cup-logo.png" alt="Synergie Rocket League Cup">
-                    <h3 class="record-title">Synergie Rocket League Cup</h3>
-                    <time class="record-date">2025</time>
-                </article>
+                    <article class="card record-grid-cell event-card" tabindex="0"
+                        data-title="Synergie Rocket League Cup"
+                        data-date="dd-mm-yyyy"
+                        data-participants="placeholder"
+                        data-description="placeholder"
+                        data-img="images/events/synergie-cup-logo.svg">
+                        <img src="images/events/synergie-cup-logo.svg" alt="Synergie Rocket League Cup">
+                        <h3 class="record-title">Synergie Rocket League Cup</h3>
+                        <time class="record-date">2025</time>
+                    </article>
+                </div>
+            </div>
+            <div class="container">
+                <h3 data-i18n="record.organized-title">Events we organized</h3>
+                <div class="grid">
+                    <article class="card record-grid-cell event-card" tabindex="0"
+                        data-title="In-house Yu-Gi-Oh! tournament"
+                        data-date="dd-mm-yyyy"
+                        data-participants="placeholder"
+                        data-description="placeholder"
+                        data-img="images/events/ygo_tournament.png">
+                        <img src="images/events/ygo_tournament.png" alt="In-house Yu-Gi-Oh! tournament">
+                        <h3 class="record-title" data-i18n="record.ygo-tournament.h3">In-house Yu-Gi-Oh! tournament</h3>
+                        <time class="record-date">2025</time>
+                    </article>
+                </div>
             </div>
             <!-- Event details modal -->
             <div id="eventModal" class="event-modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); justify-content:center; align-items:center;">
                 <div class="event-modal-content" style="background:var(--card); color:#e6eef8; border-radius:1rem; max-width:420px; width:90vw; padding:2.5rem 2rem; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.4);">
                     <img id="modalEventImg" src="" alt="" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
                     <h3 id="modalEventTitle" style="margin-top:0;"></h3>
+                    <p id="modalEventDescriptionLabel" data-i18n="modal.description" style="font-weight:600; margin-bottom:.2rem;"></p>
+                    <p id="modalEventDescription" style="margin-bottom:.5rem;"></p>
                     <p id="modalEventDateLabel" data-i18n="modal.date" style="font-weight:600; margin-bottom:.2rem;"></p>
                     <p id="modalEventDate" style="margin-bottom:.5rem;"></p>
                     <p id="modalEventParticipantsLabel" data-i18n="modal.participants" style="font-weight:600; margin-bottom:.2rem;"></p>
-                    <p id="modalEventParticipants" style="margin-bottom:.5rem;"></p>
-                    <p id="modalEventDescriptionLabel" data-i18n="modal.description" style="font-weight:600; margin-bottom:.2rem;"></p>
-                    <p id="modalEventDescription"></p>
+                    <p id="modalEventParticipants"></p>
                 </div>
             </div>
         </section>

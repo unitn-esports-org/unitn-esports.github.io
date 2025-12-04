@@ -21,7 +21,9 @@
       "p1": "UniTn E-sports is a student sports association founded in 2022 with the aim of creating a community of students who can share their passion for competitive video games.\nThe association aims to create student teams that participate in national and international tournaments and competitions, representing the University of Trento in the field of E-sports.\nUniTn E-sports organizes both online and offline events and competitions, involving students from different faculties and academic years, and aims to develop an external network of relationships with other universities. In addition, the association also organizes training events for students interested in entering the world of E-sports."
     },
     "record": {
-      "h1": "Record of events and competitions",
+      "main-title": "Record of events and competitions",
+      "competitions-title": "Competitions we participated in",
+      "organized-title": "Events we organized",
       "ygo-tournament": {
         "h3": "In-house Yu-Gi-Oh! tournament"
       }
@@ -88,7 +90,9 @@
       "p1": "UniTn E-sports è un'associazione sportiva studentesca nata nel 2022 con l'intento di creare una comunità di studenti che possano condividere la loro passione per i videogiochi competitivi.\nL'associazione si pone l'obiettivo di creare dei team studenteschi che partecipino a tornei e competizioni nazionali e internazionali, per rappresentare l'Università di Trento nell'ambito degli E-sports.\nUniTn E-sports organizza eventi e competizioni sia online che offline, coinvolgendo studenti di diverse facoltà e anni accademici, e punta a sviluppare un network esterno di relazioni con le altre università. Inoltre, l'associazione organizza anche eventi di formazione per gli studenti interessati a entrare nel mondo degli E-sports."
     },
     "record": {
-      "h1": "Albo degli eventi e competizioni",
+      "main-title": "Albo degli eventi e competizioni",
+      "competitions-title": "Competizioni a cui abbiamo partecipato",
+      "organized-title": "Eventi che abbiamo organizzato",
       "ygo-tournament": {
         "h3": "Torneo interno di Yu-Gi-Oh!"
       }

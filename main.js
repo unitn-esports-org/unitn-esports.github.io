@@ -6,6 +6,7 @@ navToggle && navToggle.addEventListener('click', ()=>{
   if(mainNav.style.display === 'block') mainNav.style.display = '';
   else mainNav.style.display = 'block';
 });
+  let lang = 'en'; // global language variable
 
 // Smooth scrolling for same-page anchors
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
@@ -31,7 +32,7 @@ const revealObserver = new IntersectionObserver((entries)=>{
   });
 },{threshold:0.12});
 revealEls.forEach(el=>revealObserver.observe(el));
-
+    lang = saved || (['en','it'].includes(browserLang) ? browserLang : 'en');
 // Calendar helpers: replace placeholder calendar id to create proper links
 function setupCalendarLinks(){
   const iframe = document.getElementById('gcalIframe');
@@ -97,7 +98,7 @@ function applyTranslations(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.getAttribute('data-i18n');
     // Prefer a structured translation: try `key.text`, fall back to `key`.
-    const textVal = getTranslation(lang, `${key}.text`) || getTranslation(lang, key);
+      lang = saved || (['en','it'].includes(browserLang) ? browserLang : 'en');
     if(!textVal) return;
     // If the element contains an <img>, avoid replacing innerHTML (which would remove the image).
     // Instead, set the image's alt using `key.alt` (or fallback to the text), and set an aria-label.
@@ -119,14 +120,27 @@ function applyTranslations(lang){
   // footer note (special)
   const footerNote = document.querySelector('.footer-note');
   if(footerNote){
-    footerNote.innerHTML = (lang === 'it') ? translations.it.footer.note_it : translations.en.footer.note_en;
+    footerNote.innerHTML = (lang === 'it') ? translations.it.footer.note : translations.en.footer.note;
   }
   // active language button
   document.querySelectorAll('.lang-btn').forEach(b=>{
     b.classList.toggle('active', b.getAttribute('data-lang') === lang);
   });
   localStorage.setItem('site-lang', lang);
+
+  // Always update modal labels when language changes
+  updateModalLabels(lang);
 }
+
+  // Update modal labels according to language
+  function updateModalLabels(lang) {
+    const modalEventDateLabel = document.getElementById('modalEventDateLabel');
+    const modalEventParticipantsLabel = document.getElementById('modalEventParticipantsLabel');
+    const modalEventDescriptionLabel = document.getElementById('modalEventDescriptionLabel');
+    if (modalEventDateLabel) modalEventDateLabel.textContent = getTranslation(lang, 'modal.date');
+    if (modalEventParticipantsLabel) modalEventParticipantsLabel.textContent = getTranslation(lang, 'modal.participants');
+    if (modalEventDescriptionLabel) modalEventDescriptionLabel.textContent = getTranslation(lang, 'modal.description');
+  }
 
 // initialize language on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', async ()=>{
@@ -167,10 +181,8 @@ document.addEventListener('DOMContentLoaded', async ()=>{
       const d = new Date(dateStr);
       formattedDate = d.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' });
     }
-    // Set translated labels
-    if (modalEventDateLabel) modalEventDateLabel.textContent = getTranslation(lang, 'modal.date');
-    if (modalEventParticipantsLabel) modalEventParticipantsLabel.textContent = getTranslation(lang, 'modal.participants');
-    if (modalEventDescriptionLabel) modalEventDescriptionLabel.textContent = getTranslation(lang, 'modal.description');
+      // Set translated labels (ensure up-to-date)
+      updateModalLabels(lang);
     modalEventDate.textContent = formattedDate || '';
     modalEventParticipants.textContent = card.getAttribute('data-participants') || '';
     modalEventDescription.textContent = card.getAttribute('data-description') || '';
