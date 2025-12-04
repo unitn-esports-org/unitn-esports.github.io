@@ -142,7 +142,7 @@ html, body {
 
 /* Hero */
 .hero {
-  padding: 5rem 0;
+  padding: 10rem 0;
   background: linear-gradient(90deg, rgba(124, 77, 255, 0.08), rgba(0, 194, 255, 0.04));
   border-bottom: 1px solid rgba(255, 255, 255, 0.03)
 }
@@ -163,13 +163,13 @@ html, body {
 
 /* Panels */
 .panel {
-  padding: 3rem 0
+  padding: 1rem 0
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -186,13 +186,14 @@ html, body {
 
 .card {
   background: var(--card);
-  padding: 1.4rem;
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.02);
   max-width: 100%;
   box-sizing: border-box;
 }
+
 /* Make images in record grid responsive */
 .record-grid-cell img {
   width: 100%;
@@ -280,7 +281,7 @@ html, body {
 
 /* footer note */
 .footer-note-wrap {
-  padding: 0 0 1.6rem
+  padding: 0 0 1rem
 }
 
 .footer-note {
