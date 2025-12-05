@@ -155,12 +155,12 @@ function setupEventModal(langRef) {
     // Title translation support
     const titleKey = card.getAttribute('data-title');
     modalEventImg.alt = getTranslation(langRef.current, titleKey) || titleKey || '';
-    modalEventTitle.textContent = getTranslation(langRef.current, titleKey) || titleKey || '';
+    modalEventTitle.innerHTML = getTranslation(langRef.current, titleKey) || titleKey || '';
 
     // Description translation support
     const descKey = card.getAttribute('data-description');
     const descVal = getTranslation(langRef.current, descKey) || descKey || '';
-    modalEventDescription.textContent = descVal;
+    modalEventDescription.innerHTML = descVal;
 
     // Date translation support
     const dateKey = card.getAttribute('data-date');
