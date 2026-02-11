@@ -25,10 +25,10 @@
       "competitions-title": "Competitions we participated in",
       "organized-title": "Events we organized",
       "ygo-tournament": {
-        "h3": "In-house Yu-Gi-Oh! tournament",
-        "date": "To be defined",
-        "participants": "To be defined",
-        "description": "In-house Yu-Gi-Oh! tournament held at the University of Trento, held on Dueling Book."
+        "h3": "In-house Yu-Gi-Oh! stage tournament",
+        "date": "Dates are published for each stage separately, check our social channels to stay updated.",
+        "participants": "Student community and anyone interested.",
+        "description": "In-house Yu-Gi-Oh! tournament held at the University of Trento, held on Dueling Nexus."
       },
       "gsport-league": {
         "h3": "<a href=\"https://e4sczech.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration:underline; color:inherit;\">GSport League</a>",
@@ -119,10 +119,10 @@
       "competitions-title": "Competizioni a cui abbiamo partecipato",
       "organized-title": "Eventi che abbiamo organizzato",
       "ygo-tournament": {
-        "h3": "Torneo interno di Yu-Gi-Oh!",
-        "date": "Da definire",
-        "participants": "Da definire",
-        "description": "Torneo interno di Yu-Gi-Oh! tenuto presso l'Università di Trento, giocato su Dueling Book."
+        "h3": "Torneo interno a tappe di Yu-Gi-Oh!",
+        "date": "Date vengono pubblicate per ogni tappa separatamente, controlla i nostri canali social per rimanere aggiornato.",
+        "participants": "Comunità studentesca e chiunque sia interessato.",
+        "description": "Torneo interno di Yu-Gi-Oh! tenuto presso l'Università di Trento, giocato su Dueling Nexus."
       },
       "gsport-league": {
         "h3": "<a href=\"https://e4sczech.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration:underline; color:inherit;\">GSport League</a>",
