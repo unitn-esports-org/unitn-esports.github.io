@@ -79,7 +79,8 @@
       "emailLabel": "Email:",
       "discordLabel": "Discord:",
       "socialLabel": "Social:",
-      "dataNotice": "Data processing notice"
+      "dataNotice": "Data processing notice",
+      "discordNotice": "By clicking \"Join Discord\", you are leaving our website to access a third-party site (Discord). UniTn E-sports is not responsible for any content, conduct, or policies on external platforms.<br>For questions about the Discord service, please refer to Discord's policies and support center."
     },
     "footer": {
       "copy": "© 2025 UniTn E-sports — All rights reserved",
@@ -173,7 +174,8 @@
       "emailLabel": "Email:",
       "discordLabel": "Discord:",
       "socialLabel": "Social:",
-      "dataNotice": "Informativa sul trattamento dei dati"
+      "dataNotice": "Informativa sul trattamento dei dati",
+      "discordNotice": "Cliccando su \"Unisciti a Discord\", stai lasciando il nostro sito web per accedere a un sito di terze parti (Discord). UniTn E-sports non è responsabile per alcun contenuto, condotta o politica sulle piattaforme esterne.<br>Per domande sul servizio Discord, si prega di fare riferimento alle politiche e al centro assistenza di Discord."
     },
     "footer": {
       "copy": "© 2025 UniTn E-sports — Tutti i diritti riservati",
