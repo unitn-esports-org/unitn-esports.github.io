@@ -24,6 +24,7 @@
       "main-title": "Record of events and competitions",
       "competitions-title": "Competitions we participated in",
       "organized-title": "Events we organized",
+      "close-button": "Close",
       "ygo-tournament": {
         "h3": "In-house Yu-Gi-Oh! stage tournament",
         "date": "Dates are published for each stage separately, check our social channels to stay updated.",
@@ -125,6 +126,7 @@
       "main-title": "Albo degli eventi e competizioni",
       "competitions-title": "Competizioni a cui abbiamo partecipato",
       "organized-title": "Eventi che abbiamo organizzato",
+      "close-button": "Chiudi",
       "ygo-tournament": {
         "h3": "Torneo interno a tappe di Yu-Gi-Oh!",
         "date": "Date vengono pubblicate per ogni tappa separatamente, controlla i nostri canali social per rimanere aggiornato.",
