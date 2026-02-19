@@ -28,7 +28,13 @@
         "h3": "In-house Yu-Gi-Oh! stage tournament",
         "date": "Dates are published for each stage separately, check our social channels to stay updated.",
         "participants": "Student community and anyone interested.",
-        "description": "In-house Yu-Gi-Oh! tournament held at the University of Trento, held on Dueling Nexus."
+        "description": "In-house Yu-Gi-Oh! tournament held at the University of Trento, played on Dueling Nexus."
+      },
+      "bf-ygo-tournament": {
+        "h3": "Burger Fucktory Yu-Gi-Oh! Cup",
+        "date": "Dates are published for each stage separately, check our social channels to stay updated.",
+        "participants": "Student community and anyone interested.",
+        "description": "Sponsored Yu-Gi-Oh! tournament in stages held in the <a href=\"https://www.burgerfucktory.com/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration:underline; color:inherit;\">Burger Fucktory</a> restaurant, played with physical cards."
       },
       "gsport-league": {
         "h3": "<a href=\"https://e4sczech.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration:underline; color:inherit;\">GSport League</a>",
@@ -123,7 +129,13 @@
         "h3": "Torneo interno a tappe di Yu-Gi-Oh!",
         "date": "Date vengono pubblicate per ogni tappa separatamente, controlla i nostri canali social per rimanere aggiornato.",
         "participants": "Comunità studentesca e chiunque sia interessato.",
-        "description": "Torneo interno di Yu-Gi-Oh! tenuto presso l'Università di Trento, giocato su Dueling Nexus."
+        "description": "Torneo interno di Yu-Gi-Oh! a tappe tenuto presso l'Università di Trento, giocato su Dueling Nexus."
+      },
+      "bf-ygo-tournament": {
+        "h3": "Burger Fucktory Yu-Gi-Oh! Cup",
+        "date": "Date vengono pubblicate per ogni tappa separatamente, controlla i nostri canali social per rimanere aggiornato.",
+        "participants": "Comunità studentesca e chiunque sia interessato.",
+        "description": "Torneo sponsorizzato di Yu-Gi-Oh! a tappe tenuto presso il ristorante <a href=\"https://www.burgerfucktory.com/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration:underline; color:inherit;\">Burger Fucktory</a> a Trento, giocato con mazzi fisici."
       },
       "gsport-league": {
         "h3": "<a href=\"https://e4sczech.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration:underline; color:inherit;\">GSport League</a>",
