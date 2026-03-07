@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Try theme-dark -->
 <html lang="en" class="theme-light">
 
 <head>
@@ -75,9 +74,13 @@
         <a href="#contact" class="nav-link">Contact</a>
         <div class="lang-switch">
           <button class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
-          <span class="lang-divider">|</span>
+          <span class="divider">|</span>
           <button class="lang-btn" data-lang="it" aria-label="Switch to Italian">IT</button>
         </div>
+        <button id="theme-toggle" class="button ghost compact" aria-label="Toggle theme" style="margin-left: 16px;">
+          <span class="fa-solid fa-sun theme-icon m" id="theme-icon-sun" style="display: none;"></span>
+          <span class="fa-solid fa-moon theme-icon m" id="theme-icon-moon" style="display: none;"></span>
+        </button>
       </nav>
       <div class="button-group">
         <button class="button ghost compact nav-hamburger" data-mobile-toggle aria-label="Show menu">
@@ -263,8 +266,8 @@
                       <label for="message" data-i18n="contact.label.message">Message</label>
                         <textarea id="message" name="message" rows="5" placeholder="Write a short message" data-i18n-placeholder="contact.ph.message"></textarea>
                           <div class="form-actions">
-                            <button type="submit" class="btn" data-i18n="contact.btn.send">Send</button>
-                            <button type="reset" class="btn outline" data-i18n="contact.btn.reset">Reset</button>
+                            <button type="submit" class="btn" data-i18n="contact.btn.send" style="background: var(--color-accent); color: var(--color-on-accent);">Send</button>
+                            <button type="reset" class="btn outline" data-i18n="contact.btn.reset" style="background: transparent; color: var(--color-accent); border: 2px solid var(--color-accent);">Reset</button>
                           </div>
               </form>
           </div>

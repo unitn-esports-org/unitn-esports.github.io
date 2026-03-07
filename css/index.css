@@ -57,7 +57,7 @@
   background: var(--color-accent-b);
   color: var(--color-accent);
 }
-.lang-divider {
+.divider {
   color: var(--color-text-tertiary);
   font-size: var(--font-size-m);
   user-select: none;
@@ -257,6 +257,14 @@
   --color-gradient-bg-end: #0081ff00;
   --color-gradient-promo-start: #800069;
   --color-gradient-promo-end: #005196;
+
+  /* Contact form theme variables */
+  --color-bg-card: #f7f7f9;
+  --color-form-border: #e0e0e0;
+  --color-form-input-bg: #fff;
+  --color-form-input-text: #222;
+  --color-form-label: var(--color-text-primary);
+  --color-form-border-focus: var(--color-accent);
 }
 
 .theme-light {
@@ -304,6 +312,13 @@
 
   --color-gradient-promo-start: #ffd2f7;
   --color-gradient-promo-end: #b9dfff;
+
+  --color-bg-card: #f7f7f9;
+  --color-form-border: #e0e0e0;
+  --color-form-input-bg: #fff;
+  --color-form-input-text: #222;
+  --color-form-label: var(--color-text-primary);
+  --color-form-border-focus: var(--color-accent);
 }
 
 .theme-dark {
@@ -355,6 +370,13 @@
 
   --color-gradient-promo-start: #800069;
   --color-gradient-promo-end: #005196;
+
+  --color-bg-card: #23242a;
+  --color-form-border: #444857;
+  --color-form-input-bg: #181920;
+  --color-form-input-text: #f7f7f9;
+  --color-form-label: var(--color-text-primary);
+  --color-form-border-focus: var(--color-accent);
 }
 
 .page-container {
@@ -721,6 +743,83 @@ section {
   }
 }
 
+.theme-icon {
+  align-items: center;
+  line-height: inherit !important;
+  color: var(--color-text-tertiary);
+
+  &.s {
+    font-size: var(--font-size-s);
+  }
+
+  &.m {
+    font-size: var(--font-size-m);
+  }
+
+  &.l {
+    font-size: var(--font-size-l);
+  }
+
+  &.xl {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-paragraph-xl) !important;
+  }
+}
+
+.equal-features {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.equal-features .feature-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.equal-features .feature-card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-grow: 1;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Remove duplicate .calendar-embed rules and consolidate */
+.calendar-embed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.calendar-embed iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  border: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Create utility classes for common patterns */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Navigation */
 
 .nav-container {
@@ -875,7 +974,7 @@ section {
 /* Contact Form Styles */
 
 .card.contact-form {
-  background: var(--color-bg-card, #f7f7f9);
+  background: var(--color-bg-card);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 2rem 2.5rem;
@@ -894,23 +993,23 @@ section {
 #contactForm label {
   font-weight: 600;
   margin-bottom: 0.3rem;
-  color: var(--color-text-primary, #fff);
+  color: var(--color-form-label);
 }
 
 #contactForm input,
 #contactForm textarea {
   padding: 0.75rem 1rem;
-  border: 1px solid var(--color-border, #e0e0e0);
+  border: 1px solid var(--color-form-border);
   border-radius: 8px;
   font-size: 1rem;
-  background: var(--color-bg-card, #f7f7f9);
-  color: var(--color-text-primary, #222);
-  transition: border-color 0.2s;
+  background: var(--color-form-input-bg);
+  color: var(--color-form-input-text);
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
 
 #contactForm input:focus,
 #contactForm textarea:focus {
-  border-color: var(--color-accent, #00bfae);
+  border-color: var(--color-form-border-focus);
   outline: none;
 }
 
