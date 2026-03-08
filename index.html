@@ -57,6 +57,7 @@
   <link href="css/tablet.css" rel="stylesheet" type="text/css" />
   <link href="css/mobile.css" rel="stylesheet" type="text/css" />
   <script src="js/main.js" type="text/javascript" defer></script>
+
 </head>
 
 <body>
@@ -67,19 +68,19 @@
       <a href="index.html" class="nav-brand"><img src="images/logo_no_bg.png" width="50" height="50"
           alt="Association logo" /></a>
       <nav role="navigation" class="nav-menu" data-navigation>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#past-events" class="nav-link">Past events</a>
-        <a href="#events" class="nav-link">Events</a>
-        <a href="#social" class="nav-link">Social</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="#past-events" class="nav-link" data-i18n="nav.past-events">Past events</a>
+        <a href="#events" class="nav-link" data-i18n="nav.calendar">Events</a>
+        <a href="#social" class="nav-link" data-i18n="nav.social">Social</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
         <div class="lang-switch">
           <button class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
           <span class="divider">|</span>
           <button class="lang-btn" data-lang="it" aria-label="Switch to Italian">IT</button>
         </div>
-        <button id="theme-toggle" class="button ghost compact" aria-label="Toggle theme" style="margin-left: 16px;">
-          <span class="fa-solid fa-sun theme-icon m" id="theme-icon-sun" style="display: none;"></span>
-          <span class="fa-solid fa-moon theme-icon m" id="theme-icon-moon" style="display: none;"></span>
+        <button id="theme-toggle" class="button ghost compact theme-toggle-offset" aria-label="Toggle theme">
+          <span class="fa-solid fa-sun theme-icon m" id="theme-icon-sun"></span>
+          <span class="fa-solid fa-moon theme-icon m" id="theme-icon-moon"></span>
         </button>
       </nav>
       <div class="button-group">
@@ -91,22 +92,20 @@
     <main>
       <section >
         <div class="heading hero centered">
-          <h1 class="balanced">
-           UniTn E-sports
-          </h1>
-          <p class="paragraph m secondary balanced">
-            Tournaments, events and community at the University of Trento.<br>Tune in with our social channels to stay up to date! 
+          <h1 class="balanced" data-i18n="hero.title">UniTn E-sports</h1>
+          <p class="paragraph m secondary balanced" data-i18n="hero.sub">
+            Tournaments, events and community at the University of Trento.<br>Tune in with our social channels to stay up to date!
           </p>
         </div>
         <div class="image-wide">
-            <img src="images/giocatori.jpg" width="50%" style="aspect-ratio: 2356 / 1404; border-radius: 12px; display: block; margin: 0 auto;"
+            <img src="images/giocatori.jpg" width="50%" class="hero-main-image"
             alt="Giocatori di e-sports" />
           </div>
       </section>
       <section id="about">
         <div class="heading centered">
-          <h2 class="no-top-margin">Who we are</h2>
-          <p class="paragraph m secondary">
+          <h2 class="no-top-margin" data-i18n="presentation.h1">Who we are</h2>
+          <p class="paragraph m secondary" data-i18n="presentation.p1">
             UniTn E-sports is a student sports association founded in 2022 with the aim of creating a community
             of students who can share their passion for competitive video games.<br>
             The association aims to create student teams that participate in tournaments and competitions, representing the University of Trento in the field of E-sports.<br>
@@ -120,7 +119,7 @@
             <div class="fa-regular fa-gem icon xl color-accent"></div>
             <div class="feature-heading">
               <p class="paragraph m bold">Offline and online events</p>
-              <p class="paragraph m secondary">
+              <p class="paragraph m secondary" data-i18n="presentation.events">
                 Regularly scheduled offline and online events, both competitive and recreational, to foster a sense of community.<br>
                 Check out our social channels or the calendar in the site to stay up to date with the upcoming events!
               </p>
@@ -130,7 +129,7 @@
             <div class="fa-solid fa-heart icon xl color-accent"></div>
             <div class="feature-heading">
               <p class="paragraph m bold">Community building</p>
-              <p class="paragraph m secondary">
+              <p class="paragraph m secondary" data-i18n="presentation.community">
                 We are committed to building a welcoming and inclusive community for all students, regardless if they are interested or not in competitive gaming.<br>
                 Our social channels and community spaces, like our Discord server, are always open to anyone who wants to connect with like-minded people.
               </p>
@@ -142,7 +141,7 @@
               <p class="paragraph m bold">
                 Representation and networking
               </p>
-              <p class="paragraph m secondary">
+              <p class="paragraph m secondary" data-i18n="presentation.representation">
                 Outside of the university, we aim to create a network of relationships with other universities and organizations in the E-sports and gaming field, to represent the university, create opportunities for growth and, most importantly, have fun.
               </p>
             </div>
@@ -151,7 +150,7 @@
       </section>
       <section id="past-events">
         <div class="heading">
-          <h2 class="no-top-margin">Record of events and competitions</h2>
+          <h2 class="no-top-margin" data-i18n="record.main-title">Record of events and competitions</h2>
         </div>
         <h3 class="no-top-margin" data-i18n="record.competitions-title">Competitions we participated in</h3>
         <div class="grid columns-3 equal-features">
@@ -198,30 +197,33 @@
       </section>
       <section id="events">
         <div class="heading">
-          <h2 class="no-top-margin">Upcoming events</h2>
+          <h2 class="no-top-margin" data-i18n="calendar.h1">Upcoming events</h2>
         </div>
         <div class="calendar-embed">
           <div class="calendar-actions">
-            <a id="gcalSubscribe" class="btn" href="#" target="_blank" data-i18n="calendar.openGcal" style="text-decoration: none;">Open in Google Calendar</a>
-            <a id="icsDownload" class="btn outline" href="#" data-i18n="calendar.downloadIcs" style="text-decoration: none;">Export (download .ics file)</a>
+            <a id="gcalSubscribe" class="btn calendar-link" href="#" target="_blank" data-i18n="calendar.openGcal">Open in Google Calendar</a>
+            <a id="icsDownload" class="btn outline calendar-link" href="#" data-i18n="calendar.downloadIcs">Export (download .ics file)</a>
           </div>
           <iframe id="gcalIframe"
             src="https://calendar.google.com/calendar/embed?src=unitn_e-sports%40outlook.it&ctz=Europe%2FRome"
-            style="border:0; display:block; margin:0 auto; width:100%; max-width:800px; height:600px;" frameborder="0" scrolling="no"></iframe>
+            frameborder="0" scrolling="no"></iframe>
         </div>
       </section>
       <section class="promo-cta">
         <div class="heading centered">
-          <h2>Want to become associated?</h2>
+          <h2 data-i18n="call-to-action.h1">Want to become associated?</h2>
           <div class="button-group margin-paragraph centered">
-            <a href="https://forms.gle/1zAUvfsMbTQmNchWA" class="button primary">Sign Up</a>
+            <p class="paragraph m secondary" data-i18n="call-to-action.desc">
+              We are always looking for new members, both to participate in our events and competitions, and to help us organize them!
+            </p>
+            <a href="https://forms.gle/1zAUvfsMbTQmNchWA" class="button primary" data-i18n="call-to-action.button">Sign Up</a>
           </div>
         </div>
       </section>
       <section id="social">
         <div class="heading centered">
-          <h2 class="no-top-margin">Follow us on social media!</h2>
-          <p class="paragraph m secondary">
+          <h2 class="no-top-margin" data-i18n="social.h1">Follow us on social media!</h2>
+          <p class="paragraph m secondary" data-i18n="social.desc">
             Stay up to date with our latest news, events and announcements by following us on our social media channels.
           </p>
         </div>
@@ -251,8 +253,8 @@
       <section id="contact">
         <div class="grid columns-1/2-1 gap-xl">
           <div class="heading">
-            <h2 class="no-top-margin">Do you have questions?<br>Feel free to reach out.</h2>
-            <p class="paragraph m secondary">
+            <h2 class="no-top-margin" data-i18n="contact.h1">Do you have questions?<br>Feel free to reach out.</h2>
+            <p class="paragraph m secondary" data-i18n="contact.desc">
               Whether you want to propose an event, reach out to the directors of the association, or just want to say hi, you can contact us via email 
               (<a href="mailto:unitn_e-sports@outlook.it">unitn_e-sports@outlook.it</a>), through the integrated contact form or through our social channels.
             </p>
@@ -266,8 +268,8 @@
                       <label for="message" data-i18n="contact.label.message">Message</label>
                         <textarea id="message" name="message" rows="5" placeholder="Write a short message" data-i18n-placeholder="contact.ph.message"></textarea>
                           <div class="form-actions">
-                            <button type="submit" class="btn" data-i18n="contact.btn.send" style="background: var(--color-accent); color: var(--color-on-accent);">Send</button>
-                            <button type="reset" class="btn outline" data-i18n="contact.btn.reset" style="background: transparent; color: var(--color-accent); border: 2px solid var(--color-accent);">Reset</button>
+                            <button type="submit" class="btn contact-btn-send" data-i18n="contact.btn.send">Send</button>
+                            <button type="reset" class="btn outline contact-btn-reset" data-i18n="contact.btn.reset">Reset</button>
                           </div>
               </form>
           </div>
@@ -275,9 +277,9 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer-menu" style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <div style="width: 100%; max-width: 900px; margin: 0 auto;">
-          <p class="paragraph s" style="width: 100%; text-align: justify; margin: 0 auto;">
+      <div class="footer-menu footer-menu-centered">
+        <div class="footer-content-wrap">
+          <p class="paragraph s footer-text" data-i18n="footer">
             <small data-i18n="footer.copy">&copy; 2026 UniTn E-sports — All rights reserved</small><br>
             All assets used to describe or display events remain the property of their respective owners.<br>
             UniTn E-sports makes no claim of ownership over such materials.<br>
@@ -289,8 +291,8 @@
             Base template provided as FOSS code by <a href="https://evilmartians.com" target="_blank">Evil Martians</a>, product consulting for developer tools.<br />Built with <a href="https://launchkit.evilmartians.io" target="_blank">LaunchKit</a>.<br><br>
             Made with ❤️ by Pietro Marini
           </p>
-          <div class="link-list-horizontal" style="margin-top: 16px; justify-content: center; display: flex; width: 100%;">
-            <a href="https://docs.google.com/document/d/1l3nuQs8Y8GcIAx6OzGMqUU-exDNOYUm7yGDiTiGnRu8/edit?usp=sharing" class="ui s tertiary" style="text-align: center;">Data processing notice</a>
+          <div class="link-list-horizontal footer-links-row">
+            <a href="https://docs.google.com/document/d/1l3nuQs8Y8GcIAx6OzGMqUU-exDNOYUm7yGDiTiGnRu8/edit?usp=sharing" class="ui s tertiary footer-links-anchor">Data processing notice</a>
           </div>
         </div>
       </div>

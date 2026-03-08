@@ -37,6 +37,60 @@ function handleMobileNav() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // --- i18n Translation ---
+  // Load i18n data and handle language switching
+  let i18n = {};
+  fetch('i18n.json')
+    .then(r => r.json())
+    .then(data => {
+      i18n = data;
+      initI18n();
+    });
+
+  function setLang(lang) {
+    if (!i18n[lang]) return;
+    localStorage.setItem('lang', lang);
+    applyTranslations(lang);
+    // Update active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+
+  function applyTranslations(lang) {
+    // Text content
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const value = getI18nValue(i18n[lang], key);
+      if (value) el.innerHTML = value;
+    });
+    // Placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      const value = getI18nValue(i18n[lang], key);
+      if (value) el.setAttribute('placeholder', value);
+    });
+  }
+
+  function getI18nValue(obj, key) {
+    // key can be nested: contact.label.name
+    return key.split('.').reduce((o, k) => (o && o[k] !== undefined) ? o[k] : null, obj);
+  }
+
+  function initI18n() {
+    // Set initial language
+    let lang = localStorage.getItem('lang');
+    if (!lang || !i18n[lang]) {
+      lang = navigator.language && i18n[navigator.language.slice(0,2)] ? navigator.language.slice(0,2) : 'en';
+    }
+    setLang(lang);
+    // Add event listeners
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        setLang(btn.getAttribute('data-lang'));
+      });
+    });
+  }
 
   // --- Theme Icon Initial State and Toggle ---
   function updateThemeIcons(theme) {
