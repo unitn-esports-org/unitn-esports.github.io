@@ -117,9 +117,35 @@ document.addEventListener("DOMContentLoaded", () => {
   handleMobileNav();
   setupCalendarLinks();
 
+  const html = document.documentElement;
+
+  // --- Dyslexic Font Toggle ---
+  const dyslexicToggle = document.getElementById('dyslexic-toggle');
+  function setDyslexicFont(enabled) {
+    html.classList.toggle('font-dyslexic', enabled);
+    localStorage.setItem('dyslexic-font', enabled ? 'enabled' : 'disabled');
+
+    if (dyslexicToggle) {
+      const actionLabel = enabled ? 'Disable dyslexic font' : 'Enable dyslexic font';
+      dyslexicToggle.classList.toggle('active', enabled);
+      dyslexicToggle.setAttribute('aria-pressed', String(enabled));
+      dyslexicToggle.setAttribute('aria-label', actionLabel);
+      dyslexicToggle.setAttribute('title', actionLabel);
+    }
+  }
+
+  const savedDyslexicFont = localStorage.getItem('dyslexic-font');
+  setDyslexicFont(savedDyslexicFont === 'enabled');
+
+  if (dyslexicToggle) {
+    dyslexicToggle.addEventListener('click', () => {
+      const isEnabled = html.classList.contains('font-dyslexic');
+      setDyslexicFont(!isEnabled);
+    });
+  }
+
   // --- Theme Toggle ---
   const themeToggle = document.getElementById('theme-toggle');
-  const html = document.documentElement;
   function setTheme(theme) {
     if (theme === 'light') {
       html.classList.remove('theme-dark');
