@@ -34,6 +34,7 @@
     text-align: center;
     left: 0;
     right: 0;
+    transform: none;
     background-color: var(--color-background);
     box-shadow: 0 0 0 1px var(--color-border-level-2);
     border-radius: var(--radius-l);

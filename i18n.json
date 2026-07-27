@@ -20,7 +20,7 @@
     "presentation": {
       "h1": "Who we are",
       "p1": "UniTn E-sports is a student sports association founded in 2022 with the aim of creating a community of students who can share their passion for competitive video games.<br>The association aims to create student teams that participate in national and international tournaments and competitions, representing the University of Trento in the field of E-sports.<br>UniTn E-sports organizes both online and offline events and competitions, involving students from different faculties and academic years, and aims to develop an external network of relationships with other universities. In addition, the association also organizes training events for students interested in entering the world of E-sports.",
-      "events":  "Regularly scheduled offline and online events, both competitive and recreational, to foster a sense of community.<br>Check out our social channels or the calendar in the site to stay up to date with the upcoming events!",
+      "events": "Regularly scheduled offline and online events, both competitive and recreational, to foster a sense of community.<br>Check out our social channels or the calendar in the site to stay up to date with the upcoming events!",
       "community": "We are committed to building a welcoming and inclusive community for all students, regardless if they are interested or not in competitive gaming.<br>Our social channels and community spaces, like our Discord server, are always open to anyone who wants to connect with like-minded people.",
       "representation": "Outside of the university, we aim to create a network of relationships with other universities and organizations in the E-sports and gaming field, to represent the university, create opportunities for growth and, most importantly, have fun."
     },
@@ -102,14 +102,14 @@
       "dataNotice": "Data processing notice",
       "discordNotice": "By clicking \"Join Discord\", you are leaving our website to access a third-party site (Discord). UniTn E-sports is not responsible for any content, conduct, or policies on external platforms.<br>For questions about the Discord service, please refer to Discord's policies and support center."
     },
-    "footer": "<small data-i18n=\"footer.copy\">&copy; 2026 UniTn E-sports — All rights reserved</small><br>All assets used to describe or display events remain the property of their respective owners.<br>UniTn E-sports makes no claim of ownership over such materials.<br>Dyslexic font toggle uses <a href=\"https://opendyslexic.org/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenDyslexic font</a> by Abbie Gonzalez, used under the SIL Open Font License.<br>For any dispute or doubts about our use of these assets, contact us via the email previously written in the site or via the integrated contact form.<br><br>By clicking \"Join Discord\", you are leaving our website to access a third-party site (Discord).<br>UniTn E-sports is not responsible for any content, conduct, or policies on external platforms.<br>For questions about the Discord service, please refer to Discord's policies and support center.<br><br>Base template provided as FOSS code by <a href=\"https://evilmartians.com\" target=\"_blank\">Evil Martians</a>, product consulting for developer tools.<br />Built with <a href=\"https://launchkit.evilmartians.io\" target=\"_blank\">LaunchKit</a>.<br><br>Made with ❤️ by Pietro Marini",
+    "footer": "<small data-i18n=\"footer.copy\">&copy; 2026 UniTn E-sports — All rights reserved</small><br>All assets used to describe or display events remain the property of their respective owners.<br>UniTn E-sports makes no claim of ownership over such materials.<br>Dyslexic font toggle uses <a href=\"https://opendyslexic.org/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenDyslexic font</a> by Abbie Gonzalez, used under the SIL Open Font License.<br>For any dispute or doubts about our use of these assets, contact us via the email previously written in the site or via the integrated contact form.<br><br>By clicking \"Join Discord\", you are leaving our website to access a third-party site (Discord).<br>UniTn E-sports is not responsible for any content, conduct, or policies on external platforms.<br>For questions about the Discord service, please refer to Discord's policies and support center.<br><br>Base template provided as <a href=\"https://github.com/evilmartians/devtool-template\" target=\"_blank\">FOSS code</a> by Evil Martians<br><br>Made with ❤️ by <a href=\"https://github.com/marini-pietro\" target=\"_blank\">Pietro Marini</a>.",
     "dyslexicFontLabel": "Dyslexic font",
-     "modal": {
-       "date": "Date:",
-       "participants": "Participants:",
-       "description": "Description:"
-     }
-    },
+    "modal": {
+      "date": "Date:",
+      "participants": "Participants:",
+      "description": "Description:"
+    }
+  },
   "it": {
     "brand": {
       "text": "UniTn E-sports",
@@ -131,7 +131,7 @@
     "presentation": {
       "h1": "Chi siamo",
       "p1": "UniTn E-sports è un'associazione sportiva studentesca nata nel 2022 con l'intento di creare una comunità di studenti che possano condividere la loro passione per i videogiochi competitivi.<br>L'associazione si pone l'obiettivo di creare dei team studenteschi che partecipino a tornei e competizioni nazionali e internazionali, per rappresentare l'Università di Trento nell'ambito degli E-sports.<br>UniTn E-sports organizza eventi e competizioni sia online che offline, coinvolgendo studenti di diverse facoltà e anni accademici, e punta a sviluppare un network esterno di relazioni con le altre università. Inoltre, l'associazione organizza anche eventi di formazione per gli studenti interessati a entrare nel mondo degli E-sports.",
-      "events":  "Eventi online and offline regolari, sia competitivi che ricreativi, per favorire un senso di comunità.<br>Controlla i nostri canali social o il calendario sul sito per rimanere aggiornato sulle prossime attività!",
+      "events": "Eventi online and offline regolari, sia competitivi che ricreativi, per favorire un senso di comunità.<br>Controlla i nostri canali social o il calendario sul sito per rimanere aggiornato sulle prossime attività!",
       "community": "Siamo impegnati a costruire una comunità accogliente e inclusiva per tutti gli studenti, indipendentemente dal loro interesse per il gaming competitivo.<br>I nostri canali social e gli spazi comunitari, come il nostro server Discord, sono sempre aperti a chiunque voglia connettersi con persone simili.",
       "representation": "Al di là dell'università, miriamo a creare una rete di relazioni con altre università e organizzazioni nel campo degli E-sports e del gaming, per rappresentare l'università, creare opportunità di crescita e, più importante ancora, divertirci."
     },
@@ -213,12 +213,12 @@
       "dataNotice": "Informativa sul trattamento dei dati",
       "discordNotice": "Cliccando su \"Unisciti a Discord\", stai lasciando il nostro sito web per accedere a un sito di terze parti (Discord). UniTn E-sports non è responsabile per alcun contenuto, condotta o politica sulle piattaforme esterne.<br>Per domande sul servizio Discord, si prega di fare riferimento alle politiche e al centro assistenza di Discord."
     },
-    "footer": "<small data-i18n=\"footer.copy\">&copy; 2026 UniTn E-sports — Tutti i diritti riservati.</small><br>Tutti gli asset usati per descrivere o mostrare gli eventi rimangono di proprietà dei rispettivi titolari.<br>UniTn E-sports non rivendica alcun diritto di proprietà su tali materiali.<br>Il pulsante per cambiare font usa il font <a href=\"https://opendyslexic.org/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration:underline; color: var(--muted);\">OpenDyslexic</a> creato da Abbie Gonzalez, usato secondo la licenza SIL Open Font.<br>Per qualsiasi disputa o dubbio riguardante il nostro utilizzo di questi asset, contattaci tramite l'email indicata nel sito o tramite il form di contatto integrato.<br><br>Cliccando su \"Unisciti a Discord\", stai lasciando il nostro sito web per accedere a un sito di terze parti (Discord).<br>UniTn E-sports non è responsabile per contenuti, condotta o politiche su piattaforme esterne.<br>Per domande sul servizio Discord, fai riferimento alle politiche e al centro assistenza di Discord.<br><br>Template base fornito come codice FOSS da <a href=\"https://evilmartians.com\" target=\"_blank\">Evil Martians</a>, consulenza di prodotto per strumenti per sviluppatori.<br />Costruito con <a href=\"https://launchkit.evilmartians.io\" target=\"_blank\">LaunchKit</a>.<br><br>Fatto con ❤️ da Pietro Marini",
-     "dyslexicFontLabel": "Font per la dislessia",
-     "modal": {
-       "date": "Data:",
-       "participants": "Partecipanti:",
-       "description": "Descrizione:"
-     }
+    "footer": "<small data-i18n=\"footer.copy\">&copy; 2026 UniTn E-sports — Tutti i diritti riservati.</small><br>Tutti gli asset usati per descrivere o mostrare gli eventi rimangono di proprietà dei rispettivi titolari.<br>UniTn E-sports non rivendica alcun diritto di proprietà su tali materiali.<br>Il pulsante per cambiare font usa il font <a href=\"https://opendyslexic.org/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration:underline; color: var(--muted);\">OpenDyslexic</a> creato da Abbie Gonzalez, usato secondo la licenza SIL Open Font.<br>Per qualsiasi disputa o dubbio riguardante il nostro utilizzo di questi asset, contattaci tramite l'email indicata nel sito o tramite il form di contatto integrato.<br><br>Cliccando su \"Unisciti a Discord\", stai lasciando il nostro sito web per accedere a un sito di terze parti (Discord).<br>UniTn E-sports non è responsabile per contenuti, condotta o politiche su piattaforme esterne.<br>Per domande sul servizio Discord, fai riferimento alle politiche e al centro assistenza di Discord.<br><br>Template base fornito come <a href=\"https://github.com/evilmartians/devtool-template\" target=\"_blank\">codice FOSS</a> da Evil Martians.<br><br>Fatto con ❤️ da <a href=\"https://github.com/marini-pietro\" target=\"_blank\">Pietro Marini</a>.",
+    "dyslexicFontLabel": "Font per la dislessia",
+    "modal": {
+      "date": "Data:",
+      "participants": "Partecipanti:",
+      "description": "Descrizione:"
     }
   }
+}
