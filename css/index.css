@@ -62,17 +62,7 @@
   font-size: var(--font-size-m);
   user-select: none;
 }
-/* Center navigation links horizontally in nav-menu */
-.nav-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
-  gap: 24px;
-}
+
 /* Social & Discord Section Layout */
 .social-discord-row {
   display: flex;
@@ -843,19 +833,54 @@ section {
   margin-top: 24px;
   inset: 24px auto auto auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: var(--color-background-blur);
   box-shadow: 0 0 0 1px var(--color-border-level-2);
   -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
   border-radius: var(--radius-l);
-  width: fit-content;
-  min-width: 100%;
+  width: 100%;
+  min-width: 0;
   max-width: calc(100vw - 32px);
   margin-left: auto;
   margin-right: auto;
   padding: 12px 12px 12px 16px;
   z-index: 1000;
+}
+
+/* Center navigation links horizontally in nav-menu */
+.nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 24px;
+}
+
+.nav-link {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-ui-m);
+  font-weight: var(--ui-button-font-weight);
+  border-radius: var(--radius-s);
+  padding: 8px 16px;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-text-primary);
+  }
+
+  &:active {
+    color: var(--color-text-tertiary);
+  }
 }
 
 .nav-menu .nav-link,
@@ -890,25 +915,6 @@ section {
 #theme-icon-sun,
 #theme-icon-moon {
   display: none;
-}
-
-.nav-link {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-m);
-  line-height: var(--line-height-ui-m);
-  font-weight: var(--ui-button-font-weight);
-  border-radius: var(--radius-s);
-  padding: 8px 16px;
-  display: inline-block;
-  text-decoration: none;
-
-  &:hover {
-    color: var(--color-text-primary);
-  }
-
-  &:active {
-    color: var(--color-text-tertiary);
-  }
 }
 
 .background-gradient {
