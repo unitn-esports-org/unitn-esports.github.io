@@ -19,6 +19,155 @@ function setupCalendarLinks() {
   icsDownload.setAttribute('download', 'events.ics');
 }
 
+function setupEventModal(getCurrentLang, getI18nValue, getI18nData) {
+  const modal = document.getElementById('event-modal');
+  const modalDialog = document.querySelector('.event-modal-dialog');
+  const modalImage = document.getElementById('event-modal-image');
+  const modalTitle = document.getElementById('event-modal-title');
+  const modalDate = document.getElementById('event-modal-date');
+  const modalParticipants = document.getElementById('event-modal-participants');
+  const modalDescription = document.getElementById('event-modal-description');
+  const modalExtras = document.getElementById('event-modal-extras');
+  const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
+  const eventCards = document.querySelectorAll('[data-event-modal-key]');
+
+  if (!modal || !modalDialog || !modalImage || !modalTitle || !modalDate || !modalParticipants || !modalDescription || !modalExtras) {
+    return;
+  }
+
+  let lastFocusedElement = null;
+  let currentEventKey = null;
+
+  function getEventData(eventKey) {
+    const lang = getCurrentLang();
+    const i18n = getI18nData();
+    const localizedData = getI18nValue(i18n[lang], `record.${eventKey}`);
+    if (localizedData) {
+      return localizedData;
+    }
+
+    const fallbackLang = i18n.en ? 'en' : Object.keys(i18n)[0];
+    return fallbackLang ? getI18nValue(i18n[fallbackLang], `record.${eventKey}`) : null;
+  }
+
+  function getEventTitle(card, eventData) {
+    if (eventData && eventData.h3) {
+      return eventData.h3;
+    }
+
+    const titleElement = card.querySelector('.feature-heading h3');
+    return titleElement ? titleElement.innerHTML : '';
+  }
+
+  function getEventImage(card) {
+    const image = card.querySelector('img');
+    return image ? { src: image.getAttribute('src') || '', alt: image.getAttribute('alt') || '' } : { src: '', alt: '' };
+  }
+
+  function renderEventModal(eventKey) {
+    const card = document.querySelector(`[data-event-modal-key="${eventKey}"]`);
+    const eventData = getEventData(eventKey) || {};
+    const title = getEventTitle(card || document.createElement('div'), eventData);
+    const image = card ? getEventImage(card) : { src: '', alt: '' };
+    const dateValue = eventData.date || '—';
+    const participantsValue = eventData.participants || '—';
+    const descriptionValue = eventData.description || '—';
+
+    modalTitle.innerHTML = title;
+    modalDate.innerHTML = dateValue;
+    modalParticipants.innerHTML = participantsValue;
+    modalDescription.innerHTML = descriptionValue;
+    modalImage.src = image.src;
+    modalImage.alt = image.alt || modalTitle.textContent || '';
+
+    modalExtras.innerHTML = '';
+
+    Object.keys(eventData)
+      .filter(key => /^label\d+$/.test(key))
+      .map(key => Number.parseInt(key.replace('label', ''), 10))
+      .filter(Number.isFinite)
+      .sort((left, right) => left - right)
+      .forEach(index => {
+        const label = eventData[`label${index}`];
+        const value = eventData[`text${index}`];
+        if (!label || !value) return;
+
+        const row = document.createElement('p');
+        row.className = 'paragraph s secondary event-modal-row';
+        row.innerHTML = `<span class="event-modal-label">${label}</span> <span>${value}</span>`;
+        modalExtras.appendChild(row);
+      });
+  }
+
+  function openEventModal(eventKey) {
+    currentEventKey = eventKey;
+    lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    renderEventModal(eventKey);
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+    document.documentElement.classList.add('modal-open');
+    modalDialog.focus();
+  }
+
+  function closeEventModal() {
+    if (modal.hidden) {
+      return;
+    }
+
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('modal-open');
+    currentEventKey = null;
+
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+  }
+
+  eventCards.forEach(card => {
+    card.addEventListener('click', () => openEventModal(card.getAttribute('data-event-modal-key')));
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openEventModal(card.getAttribute('data-event-modal-key'));
+      }
+    });
+  });
+
+  modalCloseButtons.forEach(button => {
+    button.addEventListener('click', closeEventModal);
+  });
+
+  modal.addEventListener('click', event => {
+    if (event.target === modal || event.target.classList.contains('event-modal-backdrop')) {
+      closeEventModal();
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !modal.hidden) {
+      closeEventModal();
+    }
+  });
+
+  return {
+    refresh() {
+      if (currentEventKey) {
+        renderEventModal(currentEventKey);
+      }
+    },
+    updateCloseLabel() {
+      const lang = getCurrentLang();
+      const i18n = getI18nData();
+      const label = getI18nValue(i18n[lang], 'record.close-button') || 'Close';
+      modalCloseButtons.forEach(button => {
+        button.setAttribute('aria-label', label);
+        button.setAttribute('title', label);
+      });
+    }
+  };
+}
+
 function handleMobileNav() {
   const mobileToggle = document.querySelector("[data-mobile-toggle]");
   const navigation = document.querySelector("[data-navigation]");
@@ -40,6 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- i18n Translation ---
   // Load i18n data and handle language switching
   let i18n = {};
+  let currentLang = 'en';
+  let eventModal = null;
   fetch('i18n.json')
     .then(r => r.json())
     .then(data => {
@@ -49,12 +200,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setLang(lang) {
     if (!i18n[lang]) return;
+    currentLang = lang;
     localStorage.setItem('lang', lang);
     applyTranslations(lang);
     // Update active button
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+    if (eventModal) {
+      eventModal.updateCloseLabel();
+      eventModal.refresh();
+    }
   }
 
   function applyTranslations(lang) {
@@ -83,6 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!lang || !i18n[lang]) {
       lang = navigator.language && i18n[navigator.language.slice(0,2)] ? navigator.language.slice(0,2) : 'en';
     }
+    currentLang = lang;
     setLang(lang);
     // Add event listeners
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -116,6 +273,10 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
   handleMobileNav();
   setupCalendarLinks();
+  eventModal = setupEventModal(() => currentLang, getI18nValue, () => i18n);
+  if (eventModal) {
+    eventModal.updateCloseLabel();
+  }
 
   const html = document.documentElement;
 

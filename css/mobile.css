@@ -59,6 +59,26 @@
     grid-template-columns: 1fr;
   }
 
+  .event-modal {
+    padding: 16px;
+  }
+
+  .event-modal-dialog {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+    max-height: 90vh;
+  }
+
+  .event-modal-media {
+    min-height: 200px;
+  }
+
+  .event-modal-close {
+    top: 8px;
+    right: 8px;
+  }
+
   .card-with-icon {
     display: flex;
     flex-direction: row;

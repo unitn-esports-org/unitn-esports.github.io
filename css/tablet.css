@@ -57,6 +57,26 @@
     }
   }
 
+  .event-modal {
+    padding: 16px;
+  }
+
+  .event-modal-dialog {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+    max-height: 90vh;
+  }
+
+  .event-modal-media {
+    min-height: 220px;
+  }
+
+  .event-modal-close {
+    top: 8px;
+    right: 8px;
+  }
+
   .nav-hamburger {
     display: flex;
   }

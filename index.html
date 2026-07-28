@@ -148,23 +148,23 @@
         </div>
         <h3 class="no-top-margin" data-i18n="record.competitions-title">Competitions we participated in</h3>
         <div class="grid columns-3 equal-features">
-          <div class="feature-card">
+          <div class="feature-card" data-event-modal-key="gsport-league" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="event-modal">
             <div class="feature-heading">
-              <h3 class="color-accent no-top-margin">GSport League</h3>
+              <h3 class="color-accent no-top-margin" data-i18n="record.gsport-league.h3">GSport League</h3>
               <p class="paragraph s secondary">2023</p>
             </div>
             <img src="images/events/gsports_league.png" alt="GSport League" loading="lazy"/>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-event-modal-key="amazon-university-esports" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="event-modal">
             <div class="feature-heading">
-              <h3 class="color-accent no-top-margin">Amazon University E-sports</h3>
+              <h3 class="color-accent no-top-margin" data-i18n="record.amazon-university-esports.h3">Amazon University E-sports</h3>
               <p class="paragraph s secondary">2023</p>
             </div>
             <img src="images/events/amazon_university_esports.png" alt="Amazon University E-sports" loading="lazy"/>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-event-modal-key="synergie-rocket-league-cup" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="event-modal">
             <div class="feature-heading">
-              <h3 class="color-accent no-top-margin">Synergie Boost Cup</h3>
+              <h3 class="color-accent no-top-margin" data-i18n="record.synergie-rocket-league-cup.h3">Synergie Boost Cup</h3>
               <p class="paragraph s secondary">2025</p>
             </div>
             <img src="images/events/synergie-cup-logo.svg" alt="Synergie Boost Cup" loading="lazy"/>
@@ -173,16 +173,16 @@
 
         <h3 class="no-top-margin" data-i18n="record.organized-title">Events we organized</h3>
           <div class="grid columns-3 equal-features">
-            <div class="feature-card">
+            <div class="feature-card" data-event-modal-key="ygo-tournament" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="event-modal">
             <div class="feature-heading">
-              <h3 class="color-accent no-top-margin">UniTN Yu-Gi-Oh! Cup</h3>
+              <h3 class="color-accent no-top-margin" data-i18n="record.ygo-tournament.h3">UniTN Yu-Gi-Oh! Cup</h3>
               <p class="paragraph s secondary">2026</p>
             </div>
             <img src="images/events/ygo_tournament.webp" loading="lazy" alt="Yu-Gi-Oh! logo" />
             </div>
-            <div class="feature-card">
+            <div class="feature-card" data-event-modal-key="bf-ygo-tournament" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="event-modal">
               <div class="feature-heading">
-                <h3 class="color-accent no-top-margin">Burger Fucktory Yu-Gi-Oh! Cup</h3>
+                <h3 class="color-accent no-top-margin" data-i18n="record.bf-ygo-tournament.h3">Burger Fucktory Yu-Gi-Oh! Cup</h3>
                 <p class="paragraph s secondary">2026</p>
               </div>
               <img src="images/events/burger_fucktory_logo.svg" loading="lazy" alt="Burger Fucktory Yu-Gi-Oh! Cup" />
@@ -291,6 +291,25 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <div id="event-modal" class="event-modal" aria-hidden="true" hidden>
+    <div class="event-modal-backdrop" data-modal-close></div>
+    <div class="event-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="event-modal-title" aria-describedby="event-modal-body" tabindex="-1">
+      <button type="button" class="event-modal-close button ghost compact" data-modal-close aria-label="Close modal">×</button>
+      <div class="event-modal-media">
+        <img id="event-modal-image" alt="" loading="lazy" />
+      </div>
+      <div class="event-modal-content" id="event-modal-body">
+        <h3 id="event-modal-title" class="no-top-margin"></h3>
+        <div class="event-modal-meta">
+          <p class="paragraph s secondary event-modal-row"><span class="event-modal-label" data-i18n="modal.date">Date:</span> <span id="event-modal-date"></span></p>
+          <p class="paragraph s secondary event-modal-row"><span class="event-modal-label" data-i18n="modal.participants">Participants:</span> <span id="event-modal-participants"></span></p>
+          <p class="paragraph s secondary event-modal-row"><span class="event-modal-label" data-i18n="modal.description">Description:</span> <span id="event-modal-description"></span></p>
+        </div>
+        <div id="event-modal-extras" class="event-modal-extras"></div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
