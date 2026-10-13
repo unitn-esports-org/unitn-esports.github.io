@@ -1269,7 +1269,8 @@ body.modal-open {
 
 .footer-text {
   width: 100%;
-  text-align: justify;
+  max-width: 900px;
+  text-align: left;
   margin: 0 auto;
 }
 
