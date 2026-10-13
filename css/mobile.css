@@ -33,6 +33,16 @@
     padding: 0 16px;
   }
 
+  .image-wide {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-main-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .navbar {
     margin-top: 12px;
     top: 12px;
@@ -84,10 +94,49 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 24px;
+  }
 
-    & .icon {
-      margin-top: 24px;
-    }
+  .card-with-icon .icon {
+    margin-top: 24px;
+  }
+
+  .social-discord-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    min-height: auto;
+  }
+
+  .social-vertical-list {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto;
+  }
+
+  .social-link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .social-link-label {
+    margin-left: 0;
+  }
+
+  .discord-widget-wrap {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .discord-widget-wrap iframe,
+  .discord-widget-iframe {
+    width: 100%;
+    max-width: 350px;
+    min-width: 0;
   }
 }
 
