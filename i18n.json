@@ -78,6 +78,31 @@
       "h1": "Follow us on social media!",
       "desc": "Stay updated with our latest news, events and community highlights by following us on our social media channels."
     },
+    "whistleblowing": {
+      "pageTitle": "Whistleblowing | UniTn E-sports",
+      "back": "Back to main page",
+      "title": "Whistleblowing",
+      "subtitle": "Report concerns securely and privately.",
+      "description": "UniTn E-sports is committed to a safe and respectful environment.<br>Use this confidential channel to report harassment, discrimination, misconduct, or other concerns.<br>Please include as much detail as possible so an administrative member can review your report and take appropriate action.<br>They may request further information or another way to contact you; an in-person meeting is optional (can be requested).<br>Messages sent through this form are accessible to all administrators with access to the association email account.<br>To contact a specific member, you may also reach out through Discord or in person.",
+      "contactTitle": "Contact us",
+      "contactText": "Send a message to <a href=\"mailto:unitn_e-sports@outlook.it\">unitn_e-sports@outlook.it</a> using the form below.",
+      "label": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message"
+      },
+      "placeholder": {
+        "name": "Your name",
+        "email": "email@example.com",
+        "message": "Write your message here..."
+      },
+      "button": {
+        "send": "Send",
+        "reset": "Reset"
+      },
+      "copyright": "© 2026 UniTn E-sports — All rights reserved",
+      "dataNotice": "Data processing notice"
+    },
     "contact": {
       "h1": "Contact Us",
       "desc": "Questions or partnerships? Fill the form or email us directly.",
@@ -188,6 +213,31 @@
     "social": {
       "h1": "Seguici sui social media!",
       "desc": "Rimani aggiornato con le nostre ultime notizie, eventi e momenti salienti della community seguendo i nostri canali social."
+    },
+    "whistleblowing": {
+      "pageTitle": "Whistleblowing | UniTn E-sports",
+      "back": "Torna alla pagina principale",
+      "title": "Whistleblowing",
+      "subtitle": "Segnala dubbi in modo sicuro e riservato.",
+      "description": "UniTn E-sports si impegna a mantenere un ambiente sicuro e rispettoso.<br>Usa questo canale riservato per segnalare molestie, discriminazioni, condotte scorrette o altre problematiche.<br>Includi più dettagli possibile, così un membro dell'amministrazione potrà esaminare la segnalazione e agire di conseguenza.<br>Potrebbero essere richieste ulteriori informazioni o un altro metodo per contattarti; un incontro di persona è facoltativo (puoi richiederlo).<br>I messaggi inviati tramite questo modulo sono accessibili a tutti gli amministratori che hanno accesso all'account email dell'associazione.<br>Per contattare un membro specifico, puoi anche scriverci su Discord o parlarci di persona.",
+      "contactTitle": "Contattaci",
+      "contactText": "Invia un messaggio a <a href=\"mailto:unitn_e-sports@outlook.it\">unitn_e-sports@outlook.it</a> usando il modulo qui sotto.",
+      "label": {
+        "name": "Nome",
+        "email": "Email",
+        "message": "Messaggio"
+      },
+      "placeholder": {
+        "name": "Il tuo nome",
+        "email": "email@esempio.it",
+        "message": "Scrivi qui il tuo messaggio..."
+      },
+      "button": {
+        "send": "Invia",
+        "reset": "Reset"
+      },
+      "copyright": "© 2026 UniTn E-sports — Tutti i diritti riservati",
+      "dataNotice": "Informativa sul trattamento dei dati"
     },
     "contact": {
       "h1": "Contattaci",
