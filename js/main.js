@@ -282,6 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!i18n[lang]) return;
     currentLang = lang;
     localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
     applyTranslations(lang);
     // Update active button
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -307,6 +308,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const key = el.getAttribute('data-i18n-placeholder');
       const value = getI18nValue(i18n[lang], key);
       if (value) el.setAttribute('placeholder', value);
+    });
+
+    // Subject prefixes
+    document.querySelectorAll('[data-i18n-subject-prefix]').forEach(el => {
+      const key = el.getAttribute('data-i18n-subject-prefix');
+      const value = getI18nValue(i18n[lang], key);
+      if (value) el.dataset.subjectPrefix = value;
     });
   }
 
