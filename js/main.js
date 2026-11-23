@@ -32,6 +32,21 @@ function setupCalendarLinks() {
   icsDownload.setAttribute('download', 'events.ics');
 }
 
+function setupContactForm() {
+  const contactForm = document.querySelector('#contactForm');
+  if (!contactForm) return;
+
+  contactForm.addEventListener('submit', () => {
+    const formData = new FormData(contactForm);
+    const name = String(formData.get('name') || '').trim();
+    const subjectPrefix = contactForm.dataset.subjectPrefix || 'Contact form';
+    const action = new URL(contactForm.action);
+
+    action.searchParams.set('subject', `${subjectPrefix} - ${name}`);
+    contactForm.action = action.toString();
+  });
+}
+
 // Set up the event modal functionality
 function setupEventModal(getCurrentLang, getI18nValue, getI18nData) {
 
@@ -342,6 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
   handleMobileNav();
   setupCalendarLinks();
+  setupContactForm();
   eventModal = setupEventModal(() => currentLang, getI18nValue, () => i18n);
   if (eventModal) {
     eventModal.updateCloseLabel();

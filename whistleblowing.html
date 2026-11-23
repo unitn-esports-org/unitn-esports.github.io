@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Whistleblowing contact page for UniTn E-sports." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://unitnesports.it/whistleblowing.html" />
+  <title>Whistleblowing | UniTn E-sports</title>
+
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+  <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link href="fonts/font-awesome-6.7.2/css/all.min.css" rel="stylesheet" />
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <link href="css/tablet.css" rel="stylesheet" type="text/css" />
+  <link href="css/mobile.css" rel="stylesheet" type="text/css" />
+  <link href="css/whistleblowing.css" rel="stylesheet" type="text/css" />
+  <script src="js/main.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+  <div class="background-gradient"></div>
+  <div class="page-container">
+    <header class="nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Return to the main page">
+        <img src="images/logo_no_bg.png" alt="Association logo" />
+      </a>
+
+      <div class="nav-center">
+        <nav role="navigation" class="nav-menu" data-navigation aria-label="Page navigation">
+          <a href="index.html" class="nav-link">Back to main page</a>
+        </nav>
+      </div>
+
+      <div class="button-group">
+        <button class="button ghost compact nav-hamburger" data-mobile-toggle aria-label="Show menu" aria-expanded="false">
+          <span class="fa-solid fa-bars icon m" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="whistleblowing-main">
+      <section>
+        <div class="heading hero centered whistleblowing-hero">
+          <h1 class="balanced">Whistleblowing</h1>
+          <p class="paragraph m secondary balanced">
+            Report concerns securely and privately.
+          </p>
+        </div>
+
+        <p class="paragraph m secondary centered">
+          UniTn E-sports is committed to a safe and respectful environment.<br>
+          Use this confidential channel to report harassment, discrimination, misconduct, or other concerns.<br>
+          Please include as much detail as possible so an administrative member can review your report and take appropriate action.<br>
+          They may request further information or another way to contact you; an in-person meeting is optional (can be requested).<br>
+          Messages sent through this form are accessible to all administrators with access to the association email account.<br>
+          To contact a specific member, you may also reach out through Discord or in person.
+        </p>
+
+        <div class="whistleblowing-contact">
+          <div class="heading centered">
+            <h2 class="no-top-margin">Contact us</h2>
+            <p class="paragraph m secondary">
+              Send a message to
+              <a href="mailto:unitn_e-sports@outlook.it">unitn_e-sports@outlook.it</a>
+              using the form below.
+            </p>
+          </div>
+          <div class="card contact-form">
+            <form id="contactForm" data-subject-prefix="Whistleblowing report" action="mailto:unitn_e-sports@outlook.it?subject=Whistleblowing%20report" method="post" enctype="text/plain">
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your name" required />
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="email@example.com" required />
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+
+              <div class="form-actions">
+                <button type="submit" class="btn contact-btn-send">Send</button>
+                <button type="reset" class="btn outline contact-btn-reset">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-menu footer-menu-centered">
+        <div class="footer-content-wrap">
+          <p class="paragraph s footer-text">
+            <small>&copy; 2026 UniTn E-sports — All rights reserved</small>
+          </p>
+          <div class="link-list-horizontal footer-links-row">
+            <a href="https://docs.google.com/document/d/1l3nuQs8Y8GcIAx6OzGMqUU-exDNOYUm7yGDiTiGnRu8/edit?usp=sharing" class="ui s tertiary footer-links-anchor">Data processing notice</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
