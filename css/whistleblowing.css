@@ -1,0 +1,41 @@
+.whistleblowing-main {
+  flex: 1;
+  padding-top: 128px;
+  padding-bottom: 48px;
+}
+
+.whistleblowing-hero {
+  max-width: 672px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.whistleblowing-main > section > .paragraph.m.secondary {
+  text-align: center;
+}
+
+.whistleblowing-contact {
+  max-width: 672px;
+  margin: 48px auto 0;
+}
+
+.whistleblowing-contact .heading {
+  max-width: 672px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1056px) {
+  .whistleblowing-main {
+    padding-top: 112px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .whistleblowing-main {
+    padding-top: 96px;
+    padding-bottom: 32px;
+  }
+
+}

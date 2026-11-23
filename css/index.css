@@ -1304,8 +1304,9 @@ body.modal-open {
   width: 100%;
 }
 
-.footer-links-anchor {
+.footer-links-anchor.tertiary {
   text-align: center;
+  text-decoration: underline;
 }
 
 .full-width {
